@@ -5,17 +5,23 @@
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
-    "scheme": "myapp",
-    "userInterfaceStyle": "automatic",
+    "scheme": "modernchatvideo",
+    "userInterfaceStyle": "dark",
     "newArchEnabled": true,
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.ibrazaou.modernchatvideo",
+      "associatedDomains": [
+        "applinks:known-sunfish-56.clerk.accounts.dev",
+        "webcredentials:known-sunfish-56.clerk.accounts.dev"
+      ]
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.ibrazaou.modernchatvideo"
     },
     "web": {
       "bundler": "metro",
@@ -32,10 +38,24 @@
           "resizeMode": "contain",
           "backgroundColor": "#ffffff"
         }
-      ]
+      ],
+      "expo-secure-store",
+      [ "expo-build-properties", {
+          "ios": {
+            "deploymentTarget": "16.0"
+          }
+      }]
     ],
     "experiments": {
       "typedRoutes": true
+    },
+    "extra": {
+      "router": {
+        "origin": false
+      },
+      "eas": {
+        "projectId": "5f210c8f-77cc-41c3-81d0-51978996609d"
+      }
     }
   }
 }

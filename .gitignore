@@ -3,6 +3,9 @@
 # dependencies
 node_modules/
 
+/ios
+/android
+
 # Expo
 .expo/
 dist/
@@ -10,8 +13,7 @@ web-build/
 expo-env.d.ts
 
 # Native
-*.orig.*
-*.jks
+*.orig.* *.jks
 *.p8
 *.p12
 *.key
